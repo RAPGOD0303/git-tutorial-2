@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .flex_r{
+            display: flex;
+            flex-direction: row;
+
+        }
+        .card{
+            border:3px solid darkblue;
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            text-align: center;
+        }
+
+        .flex_c{
+            display: flex;
+            flex-direction: column;
+        }
+        .card_c{
+            border:2px solid yellow;
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            text-align: center;
+        }
+
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .gridCard{
+            border: 3px solid grey;
+            height: 100px;
+            width: 100px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex_r">
+        <div class="card">This is Flex Property Row</div>
+        <div class="card">This is Flex Property Row</div>
+        <div class="card">This is Flex Property Row</div>
+    </div>
+
+    <div class="flex_c">
+        <div class="card_c">This is inside flex property Column</div>
+        <div class="card_c">This is inside flex property Column</div>
+        <div class="card_c">This is inside flex property Column</div>
+    </div>
+
+
+    <div class="grid">
+        <div class="gridCard">This is Grid Property.</div>
+        <div class="gridCard">This is Grid Property.</div>
+        <div class="gridCard">This is Grid Property.</div>
+        <div class="gridCard">This is Grid Property.</div>
+        <div class="gridCard">This is Grid Property.</div>
+    </div>
+</body>
+</html>
