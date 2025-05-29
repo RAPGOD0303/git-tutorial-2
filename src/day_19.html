@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list">
+        
+    </ul>
+    <button onclick="addItem()">Add Item</button>
+    <p id="para">This is a para and I am trying to remove</p>
+    <button onclick="remove()">Remove Item</button>
+
+    <a href="https://www.google.com/?gfe_rd=cr&ei=xZFxVIP1KM3M8gea1ICAAg" id="link">Click Me</a>
+    <button onclick="changeURL()">Change the URL</button>
+
+    <input type="text"  id="name" placeholder="enter name">
+    <button onclick="submit()">click here</button>
+    <p id="displayName"></p>
+
+    <!-- show and hide password -->
+
+    <input type="password" name="password" id="password" placeholder="enter password">
+    <button onclick="toggle()">Show or Hide password</button>
+    <script>
+        function addItem(){
+            let li = document.createElement('li');
+            li.textContent="Apple";
+            document.getElementById('list').appendChild(li);
+        }
+        
+        function remove(){
+            document.getElementById("para").remove();
+            
+        }
+
+        function changeURL(){
+            document.getElementById('link').setAttribute("href","https://www.geeksforgeeks.org/difference-between-var-let-and-const-keywords-in-javascript/" )
+        }
+
+        function submit(){
+            let name = document.getElementById('name').value;
+            document.getElementById('displayName').innerText=name;
+        }
+
+        function toggle(){
+            const input = document.getElementById('password');
+            input.type=input.type==="password"?"text":"password";
+        }
+    </script>
+</body>
+</html>
